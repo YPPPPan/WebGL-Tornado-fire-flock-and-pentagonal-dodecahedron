@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Project A</title>
+  </head>
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL
+	-->
+  <body onload="main()">
+    <canvas id="webgl" width="600" height="600">
+    	Please use a browser that supports "canvas"
+    </canvas> 
+	<br> 
+	<b>Particle System Controls:</b> 
+  <br>
+  <b>r key:</b> reset the tornado like movement. 
+	<br>
+  <b>e key:</b> switch solver.  <div id="solver">current solver: midpoint</div> 
+  <b>WASD/IJKL key:</b> camera control.
+  <br>
+  Drag to move the top face of pentagonal dodecahedron.<br>
+  Flocking <b>not always work </b>because the balance of 4 force is hard.<br>
+  Flocking particles <b>not constrained but evade</b> from boundaries.
+	<!-- Make 'div' elements to hold changeable HTML made in our JavaScript file;
+		 (where? look at the end of 'BouncyBall03.js' at 
+			myKeyPress(), myKeyDown() and myKeyUp() fcns)
+	-->
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+	<!-- We modified the library cuon-matrix.js from the book 
+		"WebGL Programming Guide"(K. Matsuda, 2013),
+		to add matrix-stack and quaternion capabilities, 
+		and renamed it cuon-matrix-quat.js -->
+    <script src="../lib/cuon-matrix-quat03.js"></script> 
+	<!--	Finally, load in our own JavaScript program file.
+	-->
+    <script src="PanYipeng_ProjA.js"></script>
+  </body>
+</html>
